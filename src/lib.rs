@@ -71,11 +71,11 @@ const C3DHALL9_VOLATILE_27_I2C_FAST_LOOP: u32 = 0x00000004;
 const C3DHALL9_VOLATILE_27_I2C_FULL_LOOP: u32 = 0x00000008;
 const C3DHALL9_SIGN_BIT: i16 = 0x0800;
 // Resultion (LSB/Gauss) for ALS31300EEJASR-2000 [currently used]
-// const C3DHALL9_GAUSS_RESOLUTION: u8 = 1;
+const C3DHALL9_GAUSS_RESOLUTION: i16 = 1;
 // Resultion (LSB/Gauss) for ALS31300EEJASR-1000
-// const C3DHALL9_GAUSS_RESOLUTION: u8 = 2;
+// const C3DHALL9_GAUSS_RESOLUTION: i16 = 2;
 // Resultion (LSB/Gauss) for ALS31300EEJASR-500 [Demoboard]
-const C3DHALL9_GAUSS_RESOLUTION: i16 = 4;
+// const C3DHALL9_GAUSS_RESOLUTION: i16 = 4;
 
 fn to_data(buf: &[u8; 8]) -> Data {
     let mut raw_x: i16 = (buf[0] as i16) << 4 | ((buf[5] & 0x0F) as i16);
